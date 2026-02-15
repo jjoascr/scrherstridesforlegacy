@@ -97,15 +97,23 @@
     <!-- ====== CONFIG: UPDATE THESE LINKS ONCE AND YOU'RE DONE ====== -->
     <script>
       const LINKS = {
-        tshirt_store: "PASTE_YOUR_BONFIRE_OR_SPRING_LINK_HERE",
+        // ✅ Updated Bonfire link
+        tshirt_store: "https://www.bonfire.com/jjoa-scr-her-strides-for-legacy/",
+
+        // Strava
         strava_download: "https://www.strava.com/mobile",
-        strava_challenge: "https://www.strava.com/clubs/scrherstridesforlegacy",
+        strava_club: "https://www.strava.com/clubs/scrherstridesforlegacy",
+
+        // Sponsorship + Webinar + Legacy booklet (paste when ready)
         sponsor_form_or_payment: "PASTE_YOUR_SPONSOR_FORM_OR_PAYMENT_LINK_HERE",
         webinar_registration: "PASTE_YOUR_WEBINAR_REGISTRATION_LINK_HERE",
-        speaker_nomination_form: "https://docs.google.com/forms/d/e/1FAIpQLScw25l7gFMJRYyV4bhBBiGnszdbjIyI7GFfJVDsW6XNzuSeeQ/viewform?usp=header",
         legacy_booklet_form: "PASTE_YOUR_LEGACY_BOOKLET_GOOGLE_FORM_LINK_HERE",
-        black_girl_ventures: "https://www.blackgirlventures.org/",
-        committee_email: "joanna.m.ross@gmail.com" // used only for mailto (not displayed)
+
+        // Beneficiary
+        black_girl_ventures_foundation: "https://www.blackgirlventures.org/",
+
+        // General inquiries (used only for mailto; not displayed)
+        committee_email: "joanna.m.ross@gmail.com"
       };
 
       // Optional: update raised amount + progress
@@ -119,11 +127,12 @@
     <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-pink/20 shadow-sm">
       <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         <div class="flex items-center gap-3">
-         <img
-  src="jjoalogo.jpg"
-  alt="Jack and Jill of America, Inc. logo"
-  class="w-14 h-14 rounded-full object-contain bg-white border border-pink-200 shadow-sm"
-/>
+          <!-- ✅ Update to your real logo file name: "JJOA logo.jpg" (recommended rename to jjoa-logo.jpg) -->
+          <img
+            src="JJOA%20logo.jpg"
+            alt="Jack and Jill of America, Inc. logo"
+            class="w-14 h-14 rounded-full object-contain bg-white border border-pink-200 shadow-sm"
+          />
 
           <div>
             <p class="font-display text-pink text-sm">Jack and Jill of America, Inc.</p>
@@ -138,7 +147,6 @@
           <a href="#sponsor" class="hover:text-pink transition-colors">Sponsor</a>
           <a href="#beneficiary" class="hover:text-pink transition-colors">Beneficiary</a>
           <a href="#events" class="hover:text-pink transition-colors">Events</a>
-          <a href="#nominate" class="hover:text-pink transition-colors">Nominate</a>
           <a href="#booklet" class="hover:text-pink transition-colors">Legacy Booklet</a>
           <a href="#committee" class="hover:text-pink transition-colors">Committee</a>
         </div>
@@ -160,20 +168,20 @@
           <span class="text-pink">for Legacy</span>
         </h1>
 
-        <!-- UPDATED HERO COPY -->
         <p class="text-xl md:text-2xl text-slate-700 mb-8 font-light max-w-3xl mx-auto">
-          Walk with purpose. Honor our legacy. Empower the next generation of women leaders through <span class="font-semibold text-slate-800">Black Girl Ventures</span>.
+          Walk with purpose. Honor our legacy. Empower the next generation of women leaders through
+          <span class="font-semibold text-slate-800">Black Girl Ventures Foundation</span>.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a id="btn-tshirt-hero" href="#"
              class="gradient-pink text-white font-semibold px-8 py-4 rounded-full pulse-gold hover:scale-105 transition-transform">
-            Get Your T-Shirt - $25
+            Get Your T-Shirt
           </a>
 
-          <a id="btn-strava-hero" href="#walk"
+          <a id="btn-strava-hero" href="#"
              class="border-2 border-pink text-pink px-8 py-4 rounded-full hover:bg-pink hover:text-white transition-all">
-            Join the Challenge
+            Join the Club
           </a>
         </div>
 
@@ -206,9 +214,11 @@
         <div class="text-center mb-16">
           <h2 class="font-display text-5xl md:text-6xl font-bold text-pink mb-4">Our Fundraising Goal</h2>
           <p class="text-xl text-slate-700 max-w-3xl mx-auto">
-            Together, we're raising <span class="text-pink font-semibold">$50,000</span> for Black Girl Ventures.
+            Together, we're raising <span class="text-pink font-semibold">$50,000</span> for
+            <span class="font-semibold text-slate-800">Black Girl Ventures Foundation</span>.
             <span class="block mt-2 text-slate-600 text-base">
-              Funds raised through t-shirt purchases, sponsorships, and participation directly support the HBCU Next-Gen Program.
+              Funds raised through t-shirt purchases, sponsorships, and participation directly support the
+              <span class="font-semibold text-slate-800">BGV NextGen Program</span>.
             </span>
           </p>
         </div>
@@ -235,38 +245,40 @@
         <div class="text-center mb-16">
           <p class="text-pink tracking-[0.2em] uppercase text-sm mb-4">The Challenge</p>
           <h2 class="font-display text-4xl md:text-5xl font-bold mb-4 text-slate-800">SCR Her Strides for Legacy</h2>
-          <p class="text-slate-700 max-w-2xl mx-auto">March 1–March 31, 2026 • Walk any day • Wear pink with a little blue</p>
+          <p class="text-slate-700 max-w-2xl mx-auto">March 1–March 31, 2026 • Walk any day</p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
+          <!-- Step 1 -->
           <div class="bg-white rounded-2xl p-8 card-hover border-2 border-pink-200 shadow-lg">
             <div class="w-16 h-16 rounded-full gradient-pink flex items-center justify-center mb-6"><span class="text-3xl">👕</span></div>
             <h3 class="font-display text-xl font-bold text-pink mb-3">Step 1: Purchase Your T-Shirt</h3>
             <p class="text-slate-700 mb-4">
-              Every participant and supporter is encouraged to purchase the official $25 t-shirt.
-              Proceeds support Black Girl Ventures’ HBCU Next-Gen Program.
+              Every participant and supporter is encouraged to purchase the official t-shirt.
+              Proceeds support <span class="font-semibold text-slate-800">Black Girl Ventures Foundation</span> and the
+              <span class="font-semibold text-slate-800">BGV NextGen Program</span>.
             </p>
             <a id="link-tshirt-step" href="#" class="text-pink hover:underline font-medium">Order T-Shirt →</a>
           </div>
 
+          <!-- Step 2 -->
           <div class="bg-white rounded-2xl p-8 card-hover border-2 border-pink-200 shadow-lg">
             <div class="w-16 h-16 rounded-full gradient-pink flex items-center justify-center mb-6"><span class="text-3xl">📱</span></div>
             <h3 class="font-display text-xl font-bold text-pink mb-3">Step 2: Download & Join on Strava</h3>
             <p class="text-slate-700 mb-4">
-              Download Strava, then join our challenge: <strong>“SCR Her Strides for Legacy”</strong> to track miles all month.
+              <a id="link-strava-download-inline" href="#" target="_blank" rel="noopener noreferrer"
+                 class="text-pink hover:underline font-semibold">Download Strava</a>, then join our club:
+              <strong>SCR Her Strides for Legacy</strong> to track miles all month.
             </p>
             <div class="flex flex-col gap-3">
-              <a id="link-strava-download" href="#" target="_blank" rel="noopener noreferrer"
+              <a id="link-strava-club" href="#" target="_blank" rel="noopener noreferrer"
                  class="inline-block gradient-pink text-white font-semibold px-6 py-3 rounded-full hover:scale-105 transition-transform text-center">
-                Download Strava
-              </a>
-              <a id="link-strava-challenge" href="#" target="_blank" rel="noopener noreferrer"
-                 class="inline-block border-2 border-pink text-pink px-6 py-3 rounded-full hover:bg-pink hover:text-white transition-all text-center">
-                Join the Challenge
+                Join Our Club
               </a>
             </div>
           </div>
 
+          <!-- Step 3 -->
           <div class="bg-white rounded-2xl p-8 card-hover border-2 border-pink-200 shadow-lg">
             <div class="w-16 h-16 rounded-full gradient-pink flex items-center justify-center mb-6"><span class="text-3xl">🚶‍♀️</span></div>
             <h3 class="font-display text-xl font-bold text-pink mb-3">Step 3: Walk, Share & Celebrate</h3>
@@ -291,7 +303,7 @@
         <div class="text-center mb-16">
           <p class="text-pink tracking-[0.2em] uppercase text-sm mb-4">Official Merchandise</p>
           <h2 class="font-display text-4xl md:text-5xl font-bold mb-4 text-slate-800">Get Your T-Shirt</h2>
-          <p class="text-slate-700 max-w-2xl mx-auto">$25 + shipping • Proceeds support Black Girl Ventures</p>
+          <p class="text-slate-700 max-w-2xl mx-auto">Purchase the official t-shirt and support our $50,000 regional goal.</p>
         </div>
 
         <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -300,7 +312,6 @@
             <h3 class="font-display text-xl font-bold text-pink mb-4">T-Shirt Preview</h3>
 
             <div class="grid grid-cols-2 gap-4">
-              <!-- IMPORTANT: replace tshirt-1.jpg / tshirt-2.jpg with your real file names -->
               <button type="button"
                       class="block hover:opacity-90 transition-opacity cursor-zoom-in text-left"
                       data-lightbox-src="tshirt-1.jpg"
@@ -325,29 +336,21 @@
           <div class="bg-white rounded-xl p-6 border-2 border-pink-200 shadow-lg">
             <h3 class="font-display text-2xl font-bold text-pink mb-4">Official Walk T-Shirt</h3>
 
-            <!-- UPDATED TONE -->
             <p class="text-slate-700 mb-4 text-sm italic">
-              Every mother, associate, and father is encouraged to participate by purchasing an official walk t-shirt in support of our $50,000 regional goal.
+              Purchase the official t-shirt and support our $50,000 regional goal.
             </p>
 
             <ul class="space-y-3 text-slate-700 mb-6">
               <li class="flex items-center gap-3"><span class="text-pink">✓</span> Commemorative design</li>
               <li class="flex items-center gap-3"><span class="text-pink">✓</span> Multiple sizes available</li>
-              <li class="flex items-center gap-3"><span class="text-pink">✓</span> Wear pink with a little blue</li>
-              <li class="flex items-center gap-3"><span class="text-pink">✓</span> Proceeds support Black Girl Ventures</li>
+              <li class="flex items-center gap-3"><span class="text-pink">✓</span> Proceeds support Black Girl Ventures Foundation</li>
             </ul>
-
-            <div class="flex items-center justify-between mb-6">
-              <span class="text-3xl font-display font-bold text-pink">$25</span>
-              <span class="text-sm text-slate-600 whitespace-nowrap">+ shipping</span>
-            </div>
 
             <a id="btn-tshirt-buy" href="#" target="_blank" rel="noopener noreferrer"
                class="w-full gradient-pink text-white font-semibold px-8 py-4 rounded-full hover:scale-105 transition-transform inline-block text-center">
-              Purchase T-Shirt
+              Get Your T-Shirt
             </a>
 
-            <!-- EMAIL HIDDEN + MAILTO -->
             <p class="text-xs text-slate-600 text-center mt-4">
               Having trouble ordering?
               <a id="link-committee-email-1" href="#" class="text-pink hover:underline font-semibold">
@@ -374,7 +377,6 @@
         </div>
 
         <div class="bg-white rounded-2xl p-6 border-2 border-pink-200 shadow-lg">
-          <!-- Replace with your real flyer file -->
           <img src="flyer-walk.jpg" alt="Her Strides for Legacy Walk Flyer" class="w-full rounded-xl border border-pink-200 object-contain" />
           <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
             <a href="flyer-walk.jpg" download
@@ -391,24 +393,23 @@
       <div class="max-w-6xl mx-auto px-4">
         <div class="text-center mb-16">
           <p class="text-pink tracking-[0.2em] uppercase text-sm mb-4">Our Beneficiary</p>
-          <h2 class="font-display text-4xl md:text-5xl font-bold mb-4 text-slate-800">Black Girl Ventures</h2>
-          <p class="text-slate-700 max-w-2xl mx-auto">Supporting the HBCU Next-Gen Program</p>
+          <h2 class="font-display text-4xl md:text-5xl font-bold mb-4 text-slate-800">Black Girl Ventures Foundation</h2>
+          <p class="text-slate-700 max-w-2xl mx-auto">Supporting the BGV NextGen Program</p>
         </div>
 
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div class="bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-2xl p-8 border border-pink-500/30">
-            <!-- Replace with BG Ventures logo image if desired -->
-            <img src="bgvceo.jpg" alt="Black Girl Ventures" class="w-48 h-auto mx-auto mb-6 rounded-lg bg-white p-4 shadow-md" />
+            <img src="bgvceo.jpg" alt="Black Girl Ventures Foundation" class="w-48 h-auto mx-auto mb-6 rounded-lg bg-white p-4 shadow-md" />
             <h3 class="font-display text-2xl font-bold text-slate-800 mb-4">Why We’re Partnering</h3>
             <p class="text-slate-700 mb-4">
-              Black Girl Ventures expands access to community, capital, and capacity-building for women-identifying founders.
-              Our Women’s History Month effort contributes to the HBCU Next-Gen Program—supporting emerging leaders and future innovators.
+              Black Girl Ventures Foundation expands access to community, capital, and capacity-building for women-identifying founders.
+              Our Women’s History Month effort contributes to the <span class="font-semibold text-slate-800">BGV NextGen Program</span>—supporting emerging leaders and future innovators.
             </p>
             <p class="text-slate-700 mb-6">
-              Your participation directly funds leadership development and access to capital for the next generation of women founders.
+              Your participation directly supports leadership development and access to capital for the next generation of women founders.
             </p>
             <a id="link-bgv" href="#" target="_blank" rel="noopener noreferrer" class="inline-block text-pink hover:underline font-medium">
-              Learn more about Black Girl Ventures →
+              Learn more about Black Girl Ventures Foundation →
             </a>
           </div>
 
@@ -423,8 +424,8 @@
             <div class="bg-white rounded-xl p-6 border-2 border-pink-200 shadow-lg">
               <h4 class="font-display text-xl font-bold text-pink mb-3">How You Can Help</h4>
               <ul class="text-slate-700 space-y-2">
-                <li>• Purchase the official $25 t-shirt</li>
-                <li>• Join the Strava challenge and log miles all March</li>
+                <li>• Purchase the official t-shirt</li>
+                <li>• Join the Strava club and log miles all March</li>
                 <li>• Invite a sponsor (individual, chapter, or community partner)</li>
                 <li>• Share this website link widely</li>
               </ul>
@@ -440,7 +441,6 @@
         <div class="text-center mb-16">
           <p class="text-pink tracking-[0.2em] uppercase text-sm mb-4">Support Our Mission</p>
           <h2 class="font-display text-4xl md:text-5xl font-bold mb-4 text-slate-800">Become a Sponsor</h2>
-          <p class="text-slate-700 max-w-2xl mx-auto">Sponsorship tiers: $100 • $500 • $1,000</p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8 mb-10">
@@ -451,13 +451,9 @@
           </div>
 
           <div class="bg-pink-50 rounded-2xl p-8 border-2 border-pink-200 text-center shadow-xl relative">
-            <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
-              <span class="bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">POPULAR</span>
-            </div>
             <h3 class="font-display text-2xl font-bold text-pink-600 mb-2">Advocate</h3>
             <p class="text-4xl font-display font-bold text-slate-800 mb-4">$500</p>
             <p class="text-slate-700 mb-3 text-sm">Highlighted in social media and digital collateral.</p>
-            <p class="text-slate-500 text-xs">Most selected by chapters and community partners.</p>
           </div>
 
           <div class="bg-pink-100 rounded-2xl p-8 border-2 border-pink-500 text-center shadow-lg">
@@ -475,26 +471,6 @@
           <a id="btn-sponsor" href="#" target="_blank" rel="noopener noreferrer"
              class="inline-block gradient-pink text-white font-semibold px-10 py-4 rounded-full hover:scale-105 transition-transform">
             Sponsor Now
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Speaker Nomination -->
-    <section id="nominate" class="py-20 bg-gradient-to-b from-pink-50 to-purple-50">
-      <div class="max-w-4xl mx-auto px-4">
-        <div class="text-center mb-12">
-          <p class="text-pink tracking-[0.2em] uppercase text-sm mb-4">Regional Webinar</p>
-          <h2 class="font-display text-4xl md:text-5xl font-bold mb-4 text-slate-800">Nominate a Speaker</h2>
-          <p class="text-slate-700 max-w-2xl mx-auto mb-8">Submit your nomination for an inspiring speaker.</p>
-        </div>
-
-        <div class="bg-white rounded-2xl p-12 border-2 border-pink-200 text-center shadow-lg">
-          <h3 class="font-display text-2xl font-bold text-pink mb-4">Open the Nomination Form</h3>
-          <p class="text-slate-700 mb-8">Click below to access the nomination form.</p>
-          <a id="btn-nomination-form" href="#" target="_blank" rel="noopener noreferrer"
-             class="inline-block gradient-pink text-white font-semibold px-10 py-4 rounded-full hover:scale-105 transition-transform text-lg">
-            Open Nomination Form
           </a>
         </div>
       </div>
@@ -534,6 +510,7 @@
         </div>
 
         <div class="space-y-6">
+          <!-- Walk -->
           <div class="bg-white rounded-2xl p-6 md:p-8 border-2 border-pink-200 card-hover shadow-lg flex flex-col md:flex-row md:items-center gap-6">
             <div class="inline-block bg-pink-100 rounded-xl p-4 text-center">
               <p class="text-pink font-display font-bold text-3xl">MAR</p>
@@ -545,13 +522,14 @@
               <p class="text-slate-700 mb-2">Walk any day throughout March wearing your t-shirt and track your miles on Strava.</p>
             </div>
             <div class="flex-shrink-0">
-              <a id="btn-join-challenge-events" href="#" target="_blank" rel="noopener noreferrer"
+              <a id="btn-join-club-events" href="#" target="_blank" rel="noopener noreferrer"
                  class="inline-block gradient-pink text-white font-semibold px-6 py-3 rounded-full hover:scale-105 transition-transform">
-                Join Challenge
+                Join the Club
               </a>
             </div>
           </div>
 
+          <!-- Webinar -->
           <div class="bg-white rounded-2xl p-6 md:p-8 border-2 border-pink-200 card-hover shadow-lg flex flex-col md:flex-row md:items-center gap-6">
             <div class="inline-block bg-pink-100 rounded-xl p-4 text-center">
               <p class="text-pink font-display font-bold text-3xl">MAR</p>
@@ -567,13 +545,10 @@
                  class="inline-block gradient-pink text-white font-semibold px-6 py-3 rounded-full hover:scale-105 transition-transform">
                 Register
               </a>
-              <a href="#nominate"
-                 class="inline-block border-2 border-pink text-pink px-6 py-3 rounded-full hover:bg-pink hover:text-white transition-all">
-                Nominate Speaker
-              </a>
             </div>
           </div>
 
+          <!-- Legacy deadline -->
           <div class="bg-white rounded-2xl p-6 md:p-8 border-2 border-pink-200 card-hover shadow-lg flex flex-col md:flex-row md:items-center gap-6">
             <div class="inline-block bg-pink-100 rounded-xl p-4 text-center">
               <p class="text-pink font-display font-bold text-3xl">MAR</p>
@@ -635,7 +610,6 @@
           </div>
         </div>
 
-        <!-- EMAIL HIDDEN + MAILTO -->
         <div class="text-center mt-12">
           <p class="text-slate-700 mb-4">General Inquiries</p>
           <a id="link-committee-email-2" href="#" class="inline-flex items-center gap-2 text-pink hover:underline text-lg font-semibold">
@@ -654,12 +628,11 @@
         <div class="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <div class="flex items-center gap-3 mb-4">
-             <img
-  src="jjoalogo.jpg"
-  alt="Jack and Jill of America, Inc. logo"
-  class="w-14 h-14 rounded-full object-contain bg-white border border-pink-200 shadow-sm"
-/>
-
+              <img
+                src="JJOA%20logo.jpg"
+                alt="Jack and Jill of America, Inc. logo"
+                class="w-14 h-14 rounded-full object-contain bg-white border border-pink-200 shadow-sm"
+              />
               <div>
                 <p class="font-display text-pink">Jack and Jill of America, Inc.</p>
                 <p class="text-xs text-slate-600">South Central Region</p>
@@ -668,7 +641,6 @@
             <p class="text-slate-600 text-sm">Women’s History Month | Her Strides for Legacy</p>
           </div>
 
-          <!-- UPDATED FOOTER GROUPING -->
           <div>
             <h4 class="font-display text-pink font-bold mb-4">Quick Links</h4>
             <div class="grid grid-cols-2 gap-6">
@@ -683,9 +655,9 @@
               <div>
                 <p class="text-slate-500 text-xs font-semibold uppercase tracking-wide mb-2">Honor & Engage</p>
                 <ul class="space-y-2 text-slate-700 text-sm">
-                  <li><a href="#nominate" class="hover:text-pink transition-colors">Nominate a Speaker</a></li>
                   <li><a href="#booklet" class="hover:text-pink transition-colors">Legacy Booklet</a></li>
                   <li><a href="#events" class="hover:text-pink transition-colors">Upcoming Events</a></li>
+                  <li><a href="#committee" class="hover:text-pink transition-colors">Committee</a></li>
                 </ul>
               </div>
             </div>
@@ -725,19 +697,25 @@
       if (el && href && !href.startsWith("PASTE_")) el.href = href;
     }
 
+    // T-shirt links
     setHref("btn-tshirt-hero", LINKS.tshirt_store);
     setHref("link-tshirt-step", LINKS.tshirt_store);
     setHref("btn-tshirt-buy", LINKS.tshirt_store);
 
-    setHref("link-strava-download", LINKS.strava_download);
-    setHref("link-strava-challenge", LINKS.strava_challenge);
-    setHref("btn-join-challenge-events", LINKS.strava_challenge);
+    // Strava club links (✅ all "Join the Club" targets)
+    setHref("btn-strava-hero", LINKS.strava_club);
+    setHref("link-strava-download-inline", LINKS.strava_download);
+    setHref("link-strava-club", LINKS.strava_club);
+    setHref("btn-join-club-events", LINKS.strava_club);
 
+    // Sponsor / Webinar / Legacy
     setHref("btn-sponsor", LINKS.sponsor_form_or_payment);
     setHref("btn-webinar-register", LINKS.webinar_registration);
-    setHref("btn-nomination-form", LINKS.speaker_nomination_form);
     setHref("btn-legacy-form", LINKS.legacy_booklet_form);
-    setHref("link-bgv", LINKS.black_girl_ventures);
+    setHref("btn-legacy-deadline", LINKS.legacy_booklet_form);
+
+    // Beneficiary
+    setHref("link-bgv", LINKS.black_girl_ventures_foundation);
 
     // Email links: show friendly text but open mail client
     const mailto = `mailto:${LINKS.committee_email}`;
