@@ -209,35 +209,42 @@ x<!doctype html>
     </header>
 
     <!-- Fundraising Progress -->
-    <section id="fundraising" class="py-32 bg-pink-50">
-      <div class="max-w-5xl mx-auto px-4">
-        <div class="text-center mb-16">
-          <h2 class="font-display text-5xl md:text-6xl font-bold text-pink mb-4">Our Fundraising Goal</h2>
-          <p class="text-xl text-slate-700 max-w-3xl mx-auto">
-            Together, we're raising <span class="text-pink font-semibold">$50,000</span> for
-            <span class="font-semibold text-slate-800">Black Girl Ventures Foundation</span>.
-            <span class="block mt-2 text-slate-600 text-base">
-              Funds raised through t-shirt purchases, sponsorships, and participation directly support the
-              <span class="font-semibold text-slate-800">BGV NextGen Program</span>.
-            </span>
-          </p>
-        </div>
+<section id="fundraising" class="py-32 bg-pink-50">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="font-display text-5xl md:text-6xl font-bold text-pink mb-4">Our Fundraising Goal</h2>
+      <p class="text-xl text-slate-700 max-w-3xl mx-auto">
+        Together, we're raising <span class="text-pink font-semibold">$50,000</span> for
+        <span class="font-semibold text-slate-800">Black Girl Ventures Foundation</span>.
+        <span class="block mt-2 text-slate-600 text-base">
+          Funds raised through t-shirt purchases, sponsorships, and participation directly support the
+          <span class="font-semibold text-slate-800">BGV NextGen Program</span>.
+        </span>
+      </p>
+    </div>
 
-        <div class="bg-white rounded-full h-16 md:h-20 overflow-hidden relative shadow-lg mb-6 border-2 border-pink-100">
-          <div id="progress-bar" class="h-full rounded-full transition-all duration-500 ease-out"
-               style="width: 0%; background: linear-gradient(90deg, #FF1493, #FF69B4, #FF1493); background-size: 200% 100%;">
-          </div>
-          <div class="absolute inset-0 flex items-center justify-center">
-            <span id="progress-label" class="text-2xl md:text-3xl font-bold text-slate-700">$0 raised</span>
-          </div>
-        </div>
-
-        <div class="flex justify-between text-lg md:text-xl font-semibold text-slate-600 mt-4">
-          <span>$0</span>
-          <span>$50,000 Goal</span>
-        </div>
+    <div class="bg-white rounded-full h-16 md:h-20 overflow-hidden relative shadow-lg mb-6 border-2 border-pink-100">
+      <div id="progress-bar" class="h-full rounded-full transition-all duration-500 ease-out"
+           style="width: 0%; background: linear-gradient(90deg, #FF1493, #FF69B4, #FF1493); background-size: 200% 100%;">
       </div>
-    </section>
+
+      <!-- NEW: progress knob -->
+      <div id="progress-knob"
+           class="absolute top-1/2 -translate-y-1/2 w-6 h-6 md:w-7 md:h-7 rounded-full bg-white border-4 border-pink shadow-lg"
+           style="left: 0%; transform: translate(-50%, -50%); display: none;">
+      </div>
+
+      <div class="absolute inset-0 flex items-center justify-center">
+        <span id="progress-label" class="text-2xl md:text-3xl font-bold text-slate-700">$0 raised</span>
+      </div>
+    </div>
+
+    <div class="flex justify-between text-lg md:text-xl font-semibold text-slate-600 mt-4">
+      <span>$0</span>
+      <span>$50,000 Goal</span>
+    </div>
+  </div>
+</section>
 
     <!-- The Walk Section -->
 <section id="walk" class="py-20 bg-white">
@@ -815,15 +822,45 @@ x<!doctype html>
     setHref("link-committee-email-2", mailto);
 
     // Fundraising progress
-    const goal = FUNDRAISING.goal || 50000;
-    const raised = Math.max(0, FUNDRAISING.raised || 0);
-    const pct = Math.min(100, (raised / goal) * 100);
+  // Fundraising progress (accurate label + visible early movement)
+const goal = FUNDRAISING.goal || 50000;
+const raised = Math.max(0, FUNDRAISING.raised || 0);
 
-    const bar = document.getElementById("progress-bar");
-    const label = document.getElementById("progress-label");
-    if (bar) bar.style.width = pct.toFixed(1) + "%";
-    if (label) label.textContent = `$${raised.toLocaleString()} raised`;
+// True percentage for real scaling
+const truePct = goal > 0 ? (raised / goal) * 100 : 0;
 
+// Early progress visual scaling (so small amounts don't look like 0%)
+// $1–$1,000 maps to 0%–6% of the bar, then switches to truePct at $1,000+
+const EARLY_CAP = 1000;   // dollars
+const EARLY_MAX_PCT = 10;  // visual percent of the bar for early zone
+
+let visualPct = 0;
+if (raised > 0 && raised < EARLY_CAP) {
+  visualPct = (raised / EARLY_CAP) * EARLY_MAX_PCT;
+} else if (raised >= EARLY_CAP) {
+  visualPct = truePct;
+}
+visualPct = Math.max(0, Math.min(100, visualPct));
+
+const bar = document.getElementById("progress-bar");
+const label = document.getElementById("progress-label");
+const knob = document.getElementById("progress-knob");
+
+if (bar) bar.style.width = visualPct.toFixed(2) + "%";
+if (label) label.textContent = `$${raised.toLocaleString()} raised`;
+
+// Knob appears whenever raised > 0 so movement is always visible
+if (knob) {
+  if (raised > 0) {
+    knob.style.display = "block";
+    knob.style.left = visualPct.toFixed(2) + "%";
+
+    // Keep knob visible near the rounded start edge
+    if (visualPct < 1) knob.style.left = "1%";
+  } else {
+    knob.style.display = "none";
+  }
+}
     // Smooth scroll (ignore external links and buttons)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
@@ -836,6 +873,11 @@ x<!doctype html>
         }
       });
     });
+    <!-- NEW: progress knob -->
+<div id="progress-knob"
+     class="absolute top-1/2 -translate-y-1/2 w-6 h-6 md:w-7 md:h-7 rounded-full bg-white border-4 border-pink shadow-lg"
+     style="left: 0%; transform: translate(-50%, -50%); display: none;">
+</div>
 
     // ===== Lightbox behavior =====
     const overlay = document.getElementById("lightboxOverlay");
