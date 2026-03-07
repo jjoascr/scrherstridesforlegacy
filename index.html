@@ -96,25 +96,27 @@
     <!-- ====== CONFIG: UPDATE THESE LINKS ONCE AND YOU'RE DONE ====== -->
     <script>
       const LINKS = {
-        // ✅ Updated Bonfire link
-        tshirt_store: "https://www.bonfire.com/jjoa-scr-her-strides-for-legacy/",
+  // ✅ Updated Bonfire link
+  tshirt_store: "https://www.bonfire.com/jjoa-scr-her-strides-for-legacy/",
 
-        // Strava
-        strava_download: "https://www.strava.com/mobile",
-        strava_club: "https://www.strava.com/clubs/scrherstridesforlegacy",
+  // Strava
+  strava_download: "https://www.strava.com/mobile",
+  strava_club: "https://www.strava.com/clubs/scrherstridesforlegacy",
 
-        // Sponsorship + Webinar + Legacy booklet (paste when ready)
-        sponsor_form_or_payment: "https://support.jackandjillfoundation.org/campaigns/44064-women-s-history-month",
-        webinar_registration: "https://us02web.zoom.us/meeting/register/JOw6_7OkTbW8h5eZ9INEww",
-        legacy_booklet_form: "https://docs.google.com/forms/d/e/1FAIpQLScPS4NTA8-TrMl74X4SUv-vy1B6cTnIHhQnlY8RKFdr_L_Fcg/viewform?usp=dialog",
+  // Sponsorship + Webinar + Legacy booklet (paste when ready)
+  sponsor_form_or_payment: "https://support.jackandjillfoundation.org/campaigns/44064-women-s-history-month",
+  webinar_registration: "https://us02web.zoom.us/meeting/register/JOw6_7OkTbW8h5eZ9INEww",
+  legacy_booklet_form: "https://docs.google.com/forms/d/e/1FAIpQLScPS4NTA8-TrMl74X4SUv-vy1B6cTnIHhQnlY8RKFdr_L_Fcg/viewform?usp=dialog",
 
-        // Beneficiary
-        black_girl_ventures_foundation: "https://www.blackgirlventures.org/",
+  // Beneficiary
+  black_girl_ventures_foundation: "https://www.blackgirlventures.org/",
 
-        // General inquiries (used only for mailto; not displayed)
-        committee_email: "joanna.m.ross@gmail.com"
-      };
+  // Instagram
+  instagram: "https://www.instagram.com/jjoa_scrwhm/",
 
+  // General inquiries (used only for mailto; not displayed)
+  committee_email: "joanna.m.ross@gmail.com"
+};
       // Optional: update raised amount + progress
       const FUNDRAISING = {
         goal: 50000,
@@ -139,16 +141,17 @@
           </div>
         </div>
 
-        <div class="hidden md:flex items-center gap-6 text-sm text-slate-700 font-medium">
-          <a href="#walk" class="hover:text-pink transition-colors">The Walk</a>
-          <a href="#tshirts" class="hover:text-pink transition-colors">T-Shirts</a>
-          <a href="#flyer" class="hover:text-pink transition-colors">Flyer</a>
-          <a href="#sponsor" class="hover:text-pink transition-colors">Sponsor</a>
-          <a href="#beneficiary" class="hover:text-pink transition-colors">Beneficiary</a>
-          <a href="#events" class="hover:text-pink transition-colors">Events</a>
-          <a href="#booklet" class="hover:text-pink transition-colors">Legacy Booklet</a>
-          <a href="#committee" class="hover:text-pink transition-colors">Committee</a>
-        </div>
+       <div class="hidden md:flex items-center gap-6 text-sm text-slate-700 font-medium">
+  <a href="#walk" class="hover:text-pink transition-colors">The Walk</a>
+  <a href="#tshirts" class="hover:text-pink transition-colors">T-Shirts</a>
+  <a href="#flyer" class="hover:text-pink transition-colors">Flyer</a>
+  <a href="#sponsor" class="hover:text-pink transition-colors">Sponsor</a>
+  <a href="#beneficiary" class="hover:text-pink transition-colors">Beneficiary</a>
+  <a href="#events" class="hover:text-pink transition-colors">Events</a>
+  <a href="#booklet" class="hover:text-pink transition-colors">Legacy Booklet</a>
+  <a href="#committee" class="hover:text-pink transition-colors">Committee</a>
+  <a id="nav-instagram" href="#" target="_blank" rel="noopener noreferrer" class="hover:text-pink transition-colors">Instagram</a>
+</div>
       </div>
     </nav>
 
@@ -757,13 +760,16 @@
             </div>
           </div>
 
-          <div>
-            <h4 class="font-display text-pink font-bold mb-4">Share</h4>
-            <p class="text-slate-600 text-sm mb-4">Use these hashtags and tag your chapter when you post.</p>
-            <p class="text-pink font-semibold">#HerStridesForLegacy</p>
-            <p class="text-pink">#JackAndJillSCR</p>
-            <p class="text-pink">#WomensHistoryMonth</p>
-          </div>
+         <div>
+  <h4 class="font-display text-pink font-bold mb-4">Share</h4>
+  <p class="text-slate-600 text-sm mb-4">Use these hashtags and tag your chapter when you post.</p>
+  <p class="text-pink font-semibold">#HerStridesForLegacy</p>
+  <p class="text-pink">#JackAndJillSCR</p>
+  <p class="text-pink">#WomensHistoryMonth</p>
+  <a id="footer-instagram" href="#" target="_blank" rel="noopener noreferrer" class="inline-block mt-3 text-pink hover:underline font-semibold">
+    Follow us on Instagram →
+  </a>
+</div>
         </div>
 
         <div class="section-divider mb-8"></div>
@@ -815,6 +821,10 @@
     // Beneficiary
     setHref("link-bgv", LINKS.black_girl_ventures_foundation);
 
+    // Instagram
+    setHref("nav-instagram", LINKS.instagram);
+    setHref("footer-instagram", LINKS.instagram);
+    
     // Email links: show friendly text but open mail client
     const mailto = `mailto:${LINKS.committee_email}`;
     setHref("link-committee-email-1", mailto);
