@@ -572,7 +572,7 @@
       <div class="max-w-6xl mx-auto px-4">
         <div class="text-center mb-16">
           <p class="text-pink tracking-[0.2em] uppercase text-sm mb-4">Mark Your Calendar</p>
-          <h2 class="font-display text-4xl md:text-5xl font-bold mb-4 text-slate-800">Upcoming Events</h2>
+          <h2 class="font-display text-4xl md:text-5xl font-bold mb-4 text-slate-800">Events</h2>
         </div>
 
         <div class="space-y-6">
@@ -596,32 +596,30 @@
           </div>
 
           <!-- Webinar -->
-          <div class="bg-white rounded-2xl p-6 md:p-8 border-2 border-pink-200 card-hover shadow-lg flex flex-col md:flex-row md:items-center gap-6">
-            <div class="inline-block bg-pink-100 rounded-xl p-4 text-center">
-              <p class="text-pink font-display font-bold text-3xl">MAR</p>
-              <p class="text-slate-800 font-bold text-4xl">7</p>
-            </div>
-            <div class="flex-grow">
-              <span class="inline-block bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full mb-2">ZOOM</span>
-              <h3 class="font-display text-xl font-bold text-pink mb-2">Regional Webinar</h3>
-              <p class="text-slate-700 mb-2">March 7, 2026 • 9:00–10:30 AM Central Time</p>
-            </div>
-            <div class="flex-shrink-0 flex gap-3">
-           <div class="flex-shrink-0 flex gap-3 flex-wrap">
-  <a id="btn-webinar-register" href="#" target="_blank" rel="noopener noreferrer"
-     class="inline-block gradient-pink text-white font-semibold px-6 py-3 rounded-full hover:scale-105 transition-transform">
-    Register
-  </a>
-
-  <button type="button"
-          class="inline-block border-2 border-pink text-pink px-6 py-3 rounded-full hover:bg-pink hover:text-white transition-all"
-          data-lightbox-src="flyer-webinar.jpg"
-          data-lightbox-alt="Her Strides for Legacy – Regional Webinar Flyer">
-    View Flyer
-  </button>
+<div class="bg-white rounded-2xl p-6 md:p-8 border-2 border-pink-200 card-hover shadow-lg flex flex-col md:flex-row md:items-center gap-6">
+  <div class="inline-block bg-pink-100 rounded-xl p-4 text-center">
+    <p class="text-pink font-display font-bold text-3xl">MAR</p>
+    <p class="text-slate-800 font-bold text-4xl">7</p>
+  </div>
+  <div class="flex-grow">
+    <span class="inline-block bg-slate-100 text-slate-700 text-xs font-semibold px-3 py-1 rounded-full mb-2">COMPLETED EVENT</span>
+    <h3 class="font-display text-xl font-bold text-pink mb-2">Regional Webinar: Women Who Lead</h3>
+    <p class="text-slate-700 mb-2">March 7, 2026 • Virtual Event</p>
+    <p class="text-slate-600 text-sm leading-relaxed">
+      Thank you to everyone who joined us for an impactful regional conversation celebrating women’s leadership,
+      entrepreneurship, and economic empowerment.
+    </p>
+  </div>
+  <div class="flex-shrink-0 flex gap-3 flex-wrap">
+    <button type="button"
+            class="inline-block border-2 border-pink text-pink px-6 py-3 rounded-full hover:bg-pink hover:text-white transition-all"
+            data-lightbox-src="flyer-webinar.jpg"
+            data-lightbox-alt="Her Strides for Legacy – Regional Webinar Flyer">
+      View Flyer
+    </button>
+  </div>
 </div>
-            </div>
-          </div>
+         
 
           <!-- Legacy deadline -->
           <div class="bg-white rounded-2xl p-6 md:p-8 border-2 border-pink-200 card-hover shadow-lg flex flex-col md:flex-row md:items-center gap-6">
@@ -753,7 +751,7 @@
                 <p class="text-slate-500 text-xs font-semibold uppercase tracking-wide mb-2">Honor & Engage</p>
                 <ul class="space-y-2 text-slate-700 text-sm">
                   <li><a href="#booklet" class="hover:text-pink transition-colors">Legacy Booklet</a></li>
-                  <li><a href="#events" class="hover:text-pink transition-colors">Upcoming Events</a></li>
+                  <li><a href="#events" class="hover:text-pink transition-colors">Events</a></li>
                   <li><a href="#committee" class="hover:text-pink transition-colors">Committee</a></li>
                 </ul>
               </div>
@@ -814,7 +812,6 @@
 
     // Sponsor / Webinar / Legacy
     setHref("btn-sponsor", LINKS.sponsor_form_or_payment);
-    setHref("btn-webinar-register", LINKS.webinar_registration);
     setHref("btn-legacy-form", LINKS.legacy_booklet_form);
     setHref("btn-legacy-deadline", LINKS.legacy_booklet_form);
 
